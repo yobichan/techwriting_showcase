@@ -9,15 +9,7 @@ This guide is intended for:
 - Developers who need to use Git on their work computers
 - Users who have basic knowledge of Linux commands
 
-# Prerequisites
-
-Before the installation, ensure you have:
-
-- Ubuntu WSL preinstalled
-- Visual Studio Code preinstalled
-- Remote SSH plugin for Visual Studio Code preinstalled
-
-If any of the above is not installed on your system, contact your system administrator.
+{% include _includes/include_git_prereqs.md %}
 
 # Installing Git on WSL
 
