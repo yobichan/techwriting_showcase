@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Installing Git on Windows (WSL)
+title: Technical documentation showcase
 ---
 plugins:
   - jekyll-mermaid
