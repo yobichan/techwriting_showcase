@@ -28,7 +28,7 @@ To start git on Windows-based systems, do the following:
 
 ## Updating your package manager
 
-1. Update your Ubuntu operating system
+1. Update your Ubuntu operating system.
 
    ```console
    sudo apt-get update
