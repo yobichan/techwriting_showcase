@@ -95,18 +95,7 @@ To verify git installation, open your terminal and do the following:
 
 # Reviewing installation process
 
-```mermaid
-graph TD
-   A[Start] --> B[Checking Prerequisites]
-   B --> C[Installing Git]
-   C-->F[Configuring Git After Installation]
-   F --> G[Verifying the Installation]
-   G --> H{Issues Encountered?}
-   H -- No --> I[Installation Complete]
-   H -- Yes --> J[Troubleshooting Git Installation]
-   J --> G
-   J --> K[Check References for More Help]
-```
+![](../assets/images/git_install_process.png)
 
 # Troubleshooting Git installation
 
