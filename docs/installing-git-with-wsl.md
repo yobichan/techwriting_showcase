@@ -1,19 +1,14 @@
 # About this guide
 
-This guide helps you install Git on your work computer with WSL preinstalled.
+This guide helps you install Git on your Windows work computer with WSL preinstalled.
 
-## Target audience
-
-This guide is intended for:
-
-- Developers who need to use Git on their work computers
-- Users who have basic knowledge of Linux commands
+{% include include_git_target_audience.md %}
 
 {% include include_git_prereqs.md %}
 
 # Installing Git on WSL
 
-The full isntallation of git requires the following steps.
+The full installation of git requires the following steps.
 
 ## Starting WSL
 
@@ -71,7 +66,7 @@ To verify git installation, open your terminal and do the following:
 
 # Configuring git after installation
 
-1. Configure the **username** and **email** of git using the followign commands, where:
+1. Configure the **username** and **email** of git using the following commands, where:
 
    - <your_name> is your name in the format first name and surname
    - <email> is your corporate email address
