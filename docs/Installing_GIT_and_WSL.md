@@ -9,7 +9,7 @@ This guide is intended for:
 - Developers who need to use Git on their work computers
 - Users who have basic knowledge of Linux commands
 
-{% include _includes/include_git_prereqs.md %}
+{% include include_git_prereqs.md %}
 
 # Installing Git on WSL
 
