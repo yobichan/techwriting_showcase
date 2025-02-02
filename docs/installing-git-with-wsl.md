@@ -64,7 +64,7 @@ To verify git installation, open your terminal and do the following:
    user.email=your.email@example.com
    ```
 
-# Configuring git after installation
+# Configuring Git after installation
 
 1. Configure the **username** and **email** of git using the following commands, where:
 
