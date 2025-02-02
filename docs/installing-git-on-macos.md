@@ -1,6 +1,6 @@
 # About this guide
 
-This guide helps you install Git on your Apple work computer with WSL preinstalled.
+This guide helps you install Git on your Apple work computer.
 
 {% include include_git_target_audience.md %}
 
@@ -27,4 +27,4 @@ The full installation of git requires the following steps.
 
 {% include include_verify_git_installation.md %}
 
-{% include include_configure_git_after_installation.md %}
+{% include include_config_git_after_installation.md %}
