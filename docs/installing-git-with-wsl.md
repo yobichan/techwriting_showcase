@@ -21,9 +21,9 @@ To start git on Windows-based systems, do the following:
 
 1. Press the <kbd>Windows</kbd> key on your keyboard.
 1. In the search bar, type **_Ubuntu_**. The Ubuntu app should appear in the results.
-   ![](assets/images/start-menu-ubuntu_wsl.png)
+   ![](./assets/images/start-menu-ubuntu_wsl.png)
 1. Click on the **Ubuntu app**. The WSL terminal should open.
-   ![](assets/images/wsl-show-motd.png)
+   ![](./assets/images/wsl-show-motd.png)
 1. At first login, you are prompted to set up your environment. Provide a username and password for you WSL system.
 
 ## Updating your package manager
