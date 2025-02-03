@@ -28,3 +28,11 @@ The full installation of git requires the following steps.
 {% include include_verify_git_installation.md %}
 
 {% include include_config_git_after_installation.md %}
+
+# Reviewing installation process
+
+![](../assets/images/git_install_process.png)
+
+# References
+
+{% include includes_git_references.md%}
