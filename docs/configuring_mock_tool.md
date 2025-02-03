@@ -59,7 +59,7 @@ To configure query parameters, do the following:
 ## Example JSON response 1
 
 ```json
-//Sample body
+
 [
   "John",
 
@@ -89,7 +89,7 @@ To configure query parameters, do the following:
 ## Example JSON response 2
 
 ```json
-//Sample body
+
 [
   "Jack",
 
@@ -123,9 +123,8 @@ This section helps you configure the Helm chart for deploying Mockoon in your Ku
 1. Create a Helm chart:
 
   ```console
-    helm create mockoon
+  helm create mockoon
   ```
-
 2. Update the values.yaml file as follows:
 
   ```yaml
@@ -154,31 +153,25 @@ This section helps you configure the Helm chart for deploying Mockoon in your Ku
       cpu: 250m
       memory: 500Mi
   ```
-
 For the variables, see Helm chart variables.
-4. Package your Helm chart with the followign command:
+3. Package your Helm chart with the followign command:
 
-```console
-helm package mockoon
-```
+  ```console
+  helm package mockoon
+  ```
+4. Deploy the Helm chart with the followign command:
 
-5. Deploy the Helm chart with the followign command:
-
-```console
-helm install mockoon ./mockoon-0.1.0.tgz
-```
-
-6. Verify your deployment with the following command:
-
-```console
-kubectl get pods
-```
-
-7. Access the Mockoon service on port 3000 with the following command:
-
-```console
-kubectl port-forward svc/mockoon 3000:3000
-```
+  ```console
+  helm install mockoon ./mockoon-0.1.0.tgz
+  ```
+5. Verify your deployment with the following command:
+  ```console
+  kubectl get pods
+  ```
+6. Access the Mockoon service on port 3000 with the following command:
+  ```console
+  kubectl port-forward svc/mockoon 3000:3000
+  ```
 
 ## Helm chart variables
 
