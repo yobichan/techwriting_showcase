@@ -32,13 +32,15 @@ To install Mockoon desktop, do the following:
 # Running Mockoon Docker image
 
 1. Download the official Docker image of Mockoon CLI:
+
    ```console
    docker pull mockoon/cli:latest
    ```
+
 2. Using either the JSON file from Installing Mockoon desktop or an OpenAPI JSON file, run the mockoon-cli Docker container:
 
    ```console
-    docker run --rm -v $(pwd)/data.json:/data -p 3000:3000 mockoon/cli:latest -d data -p 3000
+   docker run --rm -v $(pwd)/data.json:/data -p 3000:3000 mockoon/cli:latest -d data -p 3000
    ```
 
 # Configuring query parameters
@@ -121,54 +123,63 @@ To configure query parameters, do the following:
 This section helps you configure the Helm chart for deploying Mockoon in your Kubernetes environment.
 
 1. Create a Helm chart:
-  ```console
-  helm create mockoon
-  ```
-2. Update the values.yaml file as follows:
-  ```yaml
-  docker:
-    prefix: myregistry.com/myproject
-    path: mock/mockoon/cli
 
-  url:
-    suffix: /api/v1
+   ```console
+   helm create mockoon
+   ```
 
-  replicas: 1
-
-  targetKDE: openshift
-
-  runAsUser: 1000
-  runAsGroup: 1000
-
-  ports:
-    mockoon: 3000
-
-  resources:
-    limits:
-      cpu: 1
-      memory: 1Gi
-    requests:
-      cpu: 250m
-      memory: 500Mi
-  ```
-For the variables, see Helm chart variables.
+2. Update the values.yaml file. For the full template, see Helm chart template. For the variables, see Helm chart variables.
 3. Package your Helm chart with the followign command:
-  ```console
-  helm package mockoon
-  ```
-4. Deploy the Helm chart with the followign command:
-  ```console
-  helm install mockoon ./mockoon-0.1.0.tgz
-  ```
-5. Verify your deployment with the following command:
-  ```console
-  kubectl get pods
-  ```
-6. Access the Mockoon service on port 3000 with the following command:
-  ```console
-  kubectl port-forward svc/mockoon 3000:3000
-  ```
 
+   ```console
+   helm package mockoon
+   ```
+
+4. Deploy the Helm chart with the followign command:
+
+   ```console
+   helm install mockoon ./mockoon-0.1.0.tgz
+   ```
+
+5. Verify your deployment with the following command:
+   
+   ```console
+   kubectl get pods
+   ```
+
+6. Access the Mockoon service on port 3000 with the following command:
+
+   ```console
+   kubectl port-forward svc/mockoon 3000:3000
+   ```
+   
+## Helm chart template
+```yaml
+docker:
+  prefix: myregistry.com/myproject
+  path: mock/mockoon/cli
+
+url:
+  suffix: /api/v1
+
+replicas: 1
+
+targetKDE: openshift
+
+runAsUser: 1000
+runAsGroup: 1000
+
+ports:
+  mockoon: 3000
+
+resources:
+  limits:
+    cpu: 1
+    memory: 1Gi
+  requests:
+    cpu: 250m
+    memory: 500Mi
+```
 ## Helm chart variables
 
 | Variable                    | Values or range                                           |
