@@ -122,51 +122,40 @@ This section helps you configure the Helm chart for deploying Mockoon in your Ku
 
 1. Create a Helm chart:
 
-```console
-  helm create mockoon
-```
+  ```console
+    helm create mockoon
+  ```
 
 2. Update the values.yaml file as follows:
 
-```yaml
-docker:
-  prefix: myregistry.com/myproject
-  path: mock/mockoon/cli
+  ```yaml
+  docker:
+    prefix: myregistry.com/myproject
+    path: mock/mockoon/cli
 
-url:
-  suffix: /api/v1
+  url:
+    suffix: /api/v1
 
-replicas: 1
+  replicas: 1
 
-targetKDE: openshift
+  targetKDE: openshift
 
-runAsUser: 1000
-runAsGroup: 1000
+  runAsUser: 1000
+  runAsGroup: 1000
 
-ports:
-  mockoon: 3000
+  ports:
+    mockoon: 3000
 
-resources:
-  limits:
-    cpu: 1
-    memory: 1Gi
-  requests:
-    cpu: 250m
-    memory: 500Mi
-```
+  resources:
+    limits:
+      cpu: 1
+      memory: 1Gi
+    requests:
+      cpu: 250m
+      memory: 500Mi
+  ```
 
-| Variable                    | Values or range                                           |
-| :-------------------------- | :-------------------------------------------------------- |
-| `encodedDataJson`           | Base64 encoded string representing the custom `data.json` |
-| `ports.mockoon`             | 1-65535                                                   |
-| `runAsGroup`                | Rancher esetén a security context                         |
-| `runAsUser`                 | The value of the security context                         |
-| `targetKDE`                 | `openshift`, `rke2`                                       |
-| `resources.limits.cpu`      | CPU limit (e.g., `500m` for 0.5 CPU)                      |
-| `resources.limits.memory`   | Memory limit (e.g., `512Mi` for 512 MiB)                  |
-| `resources.requests.cpu`    | CPU request (e.g., `250m` for 0.25 CPU)                   |
-| `resources.requests.memory` | Memory request (e.g., `256Mi` for 256 MiB)                |
-
+For the variables, see Helm chart variables.
 4. Package your Helm chart with the followign command:
 
 ```console
@@ -190,3 +179,17 @@ kubectl get pods
 ```console
 kubectl port-forward svc/mockoon 3000:3000
 ```
+
+## Helm chart variables
+
+| Variable                    | Values or range                                           |
+| :-------------------------- | :-------------------------------------------------------- |
+| `encodedDataJson`           | Base64 encoded string representing the custom `data.json` |
+| `ports.mockoon`             | 1-65535                                                   |
+| `runAsGroup`                | Rancher esetén a security context                         |
+| `runAsUser`                 | The value of the security context                         |
+| `targetKDE`                 | `openshift`, `rke2`                                       |
+| `resources.limits.cpu`      | CPU limit (e.g., `500m` for 0.5 CPU)                      |
+| `resources.limits.memory`   | Memory limit (e.g., `512Mi` for 512 MiB)                  |
+| `resources.requests.cpu`    | CPU request (e.g., `250m` for 0.25 CPU)                   |
+| `resources.requests.memory` | Memory request (e.g., `256Mi` for 256 MiB)                |
