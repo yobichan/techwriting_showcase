@@ -121,12 +121,10 @@ To configure query parameters, do the following:
 This section helps you configure the Helm chart for deploying Mockoon in your Kubernetes environment.
 
 1. Create a Helm chart:
-
   ```console
   helm create mockoon
   ```
 2. Update the values.yaml file as follows:
-
   ```yaml
   docker:
     prefix: myregistry.com/myproject
@@ -155,12 +153,10 @@ This section helps you configure the Helm chart for deploying Mockoon in your Ku
   ```
 For the variables, see Helm chart variables.
 3. Package your Helm chart with the followign command:
-
   ```console
   helm package mockoon
   ```
 4. Deploy the Helm chart with the followign command:
-
   ```console
   helm install mockoon ./mockoon-0.1.0.tgz
   ```
