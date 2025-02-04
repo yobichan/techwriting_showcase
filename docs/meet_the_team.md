@@ -13,7 +13,9 @@ Alice keeps our projects on track and ensures that the team delivers quality doc
 **Phone:** 555-TEAM-LEADER
 
 **Email:** alice.johnson@example.com
+
 ---
+
 <img src="../assets/images/woman_2.jpeg" alt="Alice Johnson" width="100" height="100" style="border-radius: 50%;">
 
 ### Jane Roberts – Technical Writer Expert  
@@ -22,7 +24,9 @@ Jane is a master of transforming complex technical concepts into clear, user-fri
 **Phone:** 555-TECHWRITER-EXPERT
 
 **Email:** jane.roberts@example.com
+
 ---
+
 <img src="../assets/images/man_4.png" alt="Alice Johnson" width="100" height="100" style="border-radius: 50%;">
 
 ### Edmund Davis – UX/UI Designer
