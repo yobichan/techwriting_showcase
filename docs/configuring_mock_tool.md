@@ -182,7 +182,7 @@ This section helps you configure the Helm chart for deploying Mockoon in your **
 
 # Reviewing installation process
 
-![](../assets/images/verify_mockoon.png)
+![](../assets/images/verify_mockoon_2.png)
 
 ## Helm chart template
 ```yaml
