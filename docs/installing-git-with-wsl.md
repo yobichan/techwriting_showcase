@@ -8,7 +8,7 @@ This guide helps you install Git on your Windows work computer with WSL preinsta
 
 # Installing Git on WSL
 
-The full installation of git requires the following steps.
+The full installation of Git requires the following steps.
 
 ## Starting WSL
 
@@ -33,11 +33,11 @@ To start git on Windows-based systems, do the following:
 
 ## Installing git
 
-1. Install git with the following command:
+1. Install Git with the following command:
    ```console
    sudo apt-get install git
    ```
-1. Wait until the installation finishes. For troubleshooting tips, see Troubleshooting.
+1. Wait until the installation finishes. For troubleshooting tips, see Troubleshooting Git installation.
 
 ## Verifying Git installation
 
@@ -68,25 +68,13 @@ To verify git installation, open your terminal and do the following:
 
 1. Configure the **username** and **email** of git using the following commands, where:
 
-   - <your_name> is your name in the format first name and surname
-   - <email> is your corporate email address
+   - *<your_name>* is your name in the format first name and surname
+   - *<email>* is your corporate email address
 
    ```console
    git config --global user.name <your_name>
    git config --global user.email <email>
    ```
-
-1. Generate an SSH key with the following command:
-   ```console
-   ssh-keygen -t ed25519 -b 4096 -C <email>
-   ```
-   When prompted to enter a file, press enter. Do the same when prompted to enter a passphrase.
-1. List the contents of the generated file with the following comand:
-   ```console
-   cat ~/.ssh/id_rsa.pub
-   ```
-1. Copy the output of the previous command.
-1. In your browser, navigate to the company Github website.
 
 # Reviewing installation process
 
@@ -106,11 +94,11 @@ To verify git installation, open your terminal and do the following:
    which git
    ```
 
-1. If the above command returns no path, install git.
+1. If the above command returns no path, install Git.
 
 ## Symptom: Permission Denied When Running Git
 
-**Cause:** You might be trying to run git without the right Permission
+**Cause:** You might be trying to run Git without the right Permission
 
 **Resolution:**
 

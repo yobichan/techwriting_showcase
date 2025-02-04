@@ -224,3 +224,9 @@ resources:
 | `resources.limits.memory`   | Memory limit (e.g., `512Mi` for 512 MiB)                  |
 | `resources.requests.cpu`    | CPU request (e.g., `250m` for 0.25 CPU)                   |
 | `resources.requests.memory` | Memory request (e.g., `256Mi` for 256 MiB)                |
+
+# References
+For further reading, refer to the following documentation:
+
+- Official Mockoon documentation: [https://mockoon.com/](https://mockoon.com/)
+- Official Helm documentation: [https://helm.sh/](https://helm.sh/)
