@@ -17,7 +17,7 @@ This guide is intended for:
 
 Before the installation, ensure the following:
 
-- Mockoon and Docker Desktop are installed locally
+- Mockoon Desktop and Docker Desktop are preinstalled locally
 - Helm is preinstalled locally
 
 # Installing Mockoon Desktop
@@ -179,7 +179,11 @@ This section helps you configure the Helm chart for deploying Mockoon in your **
    ```console
    kubectl port-forward svc/mockoon 3000:3000
    ```
-   
+
+# Reviewing installation process
+
+![](../assets/images/verify_mockoon.png)
+
 ## Helm chart template
 ```yaml
 docker:

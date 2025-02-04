@@ -1,6 +1,6 @@
 # Meet the Team
 
-Welcome to our amazing team! We are a group of passionate professionals dedicated to delivering the best results.  
+Welcome to our team! We are a group of passionate professionals dedicated to delivering the best results.  
 
 ---
 
@@ -10,4 +10,17 @@ Welcome to our amazing team! We are a group of passionate professionals dedicate
 
 Alice keeps our projects on track and ensures that the team delivers quality documentation to our customers. Her analytical mind keeps everything running efficiently.
 
+**Phone:** 555-TEAM-LEADER
+
+**Email:** alice.johnson@example.com
+
 ---
+<img src="../assets/images/man_4.png" alt="Alice Johnson" width="100" height="100" style="border-radius: 50%;">
+
+### Edmund Davis – UX/UI Designer
+
+Edmund is passionate about creating beautiful and user-friendly designs. He focuses on making our digital experiences seamless and engaging.
+
+**Phone:** 555-UX-DESIGN
+
+**Email:** edmund.davis@example.com
