@@ -1,6 +1,9 @@
 # About this guide
 
 This guide helps you configure the Mockoon mock tool on your work computer.
+Mockoon can be run by either:
+- the Mockoon Desktop application, or
+- the Mockoon CLI with Docker
 
 ## Target audience
 
@@ -21,13 +24,13 @@ Before the installation, ensure the following:
 
 To install Mockoon desktop, do the following:
 
-1. Navigate to the official Mockoon website.
-1. Download the Mockoon setup for your operating system.
+1. Navigate to [the official Mockoon website](https://mockoon.com/).
+1. Download the Mockoon setup file for your operating system.
 1. Install Mockoon for your operating system.
-1. Open Mockoon Desktop.
-1. Create an exemlpary API with the official guide.
+1. Open **Mockoon Desktop**.
+1. Create an exemplary API using [the official Mockoon APi tutorial website](https://mockoon.com/tutorials/getting-started/).
 1. Right click on the example API. From the menu, select the **Copy to clipboard (JSON)** option.
-1. Save the copied JSON to a folder.
+1. Save the copied JSON to a folder as `data.json`.
 
 # Running Mockoon Docker image
 
@@ -47,7 +50,7 @@ To install Mockoon desktop, do the following:
 
 To configure query parameters, do the following:
 
-1. Open Mockoon Desktop.
+1. Open **Mockoon Desktop**.
 1. Select the API endpoint you want to configure.
 1. Click on the **Query Params** tab in the endpoint configuration panel.
 1. Click the **Add** button to create a new query parameter.
@@ -118,9 +121,9 @@ To configure query parameters, do the following:
 ]
 ```
 
-# Deploying Mockoon to Kubernetes
+# Deploying Mockoon to Kubernetes environment
 
-This section helps you configure the Helm chart for deploying Mockoon in your Kubernetes environment.
+This section helps you configure the Helm chart for deploying Mockoon in your **Kubernetes environment**.
 
 1. Create a Helm chart:
 
@@ -128,23 +131,47 @@ This section helps you configure the Helm chart for deploying Mockoon in your Ku
    helm create mockoon
    ```
 
-2. Update the values.yaml file. For the full template, see Helm chart template. For the variables, see Helm chart variables.
-3. Package your Helm chart with the followign command:
+2. Update the `values.yaml` file. For the full template, see Helm chart template. For the variables, see Helm chart variables.
+3. Package your Helm chart with the following command:
 
    ```console
    helm package mockoon
    ```
 
-4. Deploy the Helm chart with the followign command:
+   The output should display success:
+
+   ```console
+   Successfully packaged chart and saved it to: ./mockoon-0.1.0.tgz
+   ```
+
+4. Deploy the Helm chart with the following command:
 
    ```console
    helm install mockoon ./mockoon-0.1.0.tgz
+   ```
+
+   The output should display `STATUS: deployed`
+
+   ```console
+   NAME: mockoon
+   LAST DEPLOYED: Fri Oct 20 12:34:56 2023
+   NAMESPACE: default
+   STATUS: deployed
+   REVISION: 1
+   TEST SUITE: None
    ```
 
 5. Verify your deployment with the following command:
    
    ```console
    kubectl get pods
+   ```
+
+   The output should display a container with a status `Running`.
+   
+   ```console
+   NAME                        READY   STATUS    RESTARTS   AGE
+   mockoon-6b7b9f6d9c-abcde    1/1     Running   0          2m
    ```
 
 6. Access the Mockoon service on port 3000 with the following command:
