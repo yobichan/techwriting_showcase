@@ -2,8 +2,8 @@
 
 1. Configure the **username** and **email** of git using the following commands, where:
 
-   - <your_name> is your name in the format first name and surname
-   - <email> is your corporate email address
+   - `your_name` is your name in the format first name and surname
+   - `email` is your corporate email address
 
    ```console
    git config --global user.name <your_name>
